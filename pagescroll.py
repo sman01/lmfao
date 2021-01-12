@@ -22,7 +22,7 @@ sum=0
 rating=[]
 reviewer=[]
 date=[]
-url= "https://www.zigwheels.com/user-reviews/Maruti-Suzuki/800"
+url= "https://www.zigwheels.com/user-reviews/Maruti-Suzuki/Swift"
 driver.get(url)
 time.sleep(5)
 f=0
@@ -35,9 +35,16 @@ while True:
 # clicking on the button
         button.click()
         f+=1
-        time.sleep(5)
+        time.sleep(2)
     except:
         break
 print("Thats all folks")
 print (f)
-driver.quit()
+for i in range(1,10):
+    id='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[2]'
+    try:
+        btn= driver.find_element_by_xpath(id)
+        btn.click()
+        print("Cleek")
+    except:
+        continue
