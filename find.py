@@ -53,6 +53,6 @@ for i in range (1,70):
 
 driver.quit()
 print("Done")
-
+print(acktual)
 for car in acktual:
     print(f'{car} = {eval(car)}')
