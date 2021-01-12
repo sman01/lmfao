@@ -597,3 +597,22 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1610457079543	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.1, line 139: TypeError: $(...).offset() is undefined
 1610457461753	Marionette	INFO	Stopped listening on port 39663
+1610468250217	geckodriver	INFO	Listening on 127.0.0.1:53859
+1610468251222	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilej7JHJI"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610468254837	Marionette	INFO	Listening on port 35111
+1610468254983	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.1, line 139: TypeError: $(...).offset() is undefined
+1610468301435	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1610468465933	Marionette	INFO	Stopped listening on port 35111
+1610468480397	geckodriver	INFO	Listening on 127.0.0.1:33191
+1610468480402	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNpNts6"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610468484435	Marionette	INFO	Listening on port 41917
+1610468484559	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.1, line 139: TypeError: $(...).offset() is undefined
+1610468709779	Marionette	INFO	Stopped listening on port 41917

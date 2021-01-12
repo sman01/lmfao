@@ -13,6 +13,7 @@ headers = {'User-Agent':'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:83.0) Gecko/
 
 
 driver = webdriver.Firefox()
+driver.set_window_size(360,480)
 models=[]
 years=[]
 page_count=0
@@ -33,7 +34,7 @@ reviews =  driver.find_element_by_xpath(revs)
 review=reviews.text.replace('reviews','')
 reviewno=int(review)
 print(reviewno)
-
+res=0
 while True:
     try:
     # finding the button using ID
@@ -42,17 +43,19 @@ while True:
 # clicking on the button
         button.click()
         f+=1
-        time.sleep(2)
+        time.sleep(1)
     except:
         break
 print("Thats all folks")
 print (f)
 for i in range(1,reviewno+1):
+    ## review :: /html/body/div[15]/div/div[1]/section/div[3]/div[3]/div[1]/div/div[2]/div/p/span[3] 
     id='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[2]'
     try:
         btn= driver.find_element_by_xpath(id)
         btn.click()
-        print("Cleek")
+        res+=1
     except:
         continue
 driver.quit()
+print(res)
