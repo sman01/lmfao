@@ -568,3 +568,32 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1610456030036	Marionette	INFO	Listening on port 40555
 1610456030153	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.1, line 139: TypeError: $(...).offset() is undefined
+1610456484789	Marionette	INFO	Stopped listening on port 40555
+1610456926230	geckodriver	INFO	Listening on 127.0.0.1:50725
+1610456926235	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilePwHBuY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610456929699	Marionette	INFO	Listening on port 37653
+1610456929774	Marionette	WARN	TLS certificate errors will be ignored for this session
+1610456954831	Marionette	INFO	Stopped listening on port 37653
+1610456956139	geckodriver	INFO	Listening on 127.0.0.1:60279
+1610456956144	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6271ks"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610456958955	Marionette	INFO	Listening on port 33913
+1610456959113	Marionette	WARN	TLS certificate errors will be ignored for this session
+1610456970872	Marionette	INFO	Stopped listening on port 33913
+1610457005211	geckodriver	INFO	Listening on 127.0.0.1:33797
+1610457005216	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHygtRx"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610457008202	Marionette	INFO	Listening on port 37339
+1610457008254	Marionette	WARN	TLS certificate errors will be ignored for this session
+1610457028767	Marionette	INFO	Stopped listening on port 37339
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1610457076284	geckodriver	INFO	Listening on 127.0.0.1:52427
+1610457076288	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7WmNiB"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610457079472	Marionette	INFO	Listening on port 39663
+1610457079543	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.1, line 139: TypeError: $(...).offset() is undefined
+1610457461753	Marionette	INFO	Stopped listening on port 39663
