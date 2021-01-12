@@ -22,6 +22,22 @@ sum=0
 rating=[]
 reviewer=[]
 date=[]
-url= "https://www.edmunds.com/car-reviews"
+url= "https://www.zigwheels.com/user-reviews/Maruti-Suzuki/800"
 driver.get(url)
 time.sleep(5)
+f=0
+ID='//*[@id="loadMore"]/span'
+while True:
+    try:
+    # finding the button using ID
+        button =  driver.find_element_by_xpath(ID)
+
+# clicking on the button
+        button.click()
+        f+=1
+        time.sleep(5)
+    except:
+        break
+print("Thats all folks")
+print (f)
+driver.quit()
