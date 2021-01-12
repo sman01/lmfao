@@ -27,6 +27,13 @@ driver.get(url)
 time.sleep(5)
 f=0
 ID='//*[@id="loadMore"]/span'
+
+revs='/html/body/div[15]/div/div[1]/section/div[2]/div[1]/div/div/span'
+reviews =  driver.find_element_by_xpath(revs)
+review=reviews.text.replace('reviews','')
+reviewno=int(review)
+print(reviewno)
+
 while True:
     try:
     # finding the button using ID
@@ -40,7 +47,7 @@ while True:
         break
 print("Thats all folks")
 print (f)
-for i in range(1,10):
+for i in range(1,reviewno+1):
     id='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[2]'
     try:
         btn= driver.find_element_by_xpath(id)
@@ -48,3 +55,4 @@ for i in range(1,10):
         print("Cleek")
     except:
         continue
+driver.quit()
