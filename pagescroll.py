@@ -6,9 +6,12 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import csv
 from itertools import zip_longest
+from selenium.common.exceptions import MoveTargetOutOfBoundsException
 import requests
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoAlertPresentException
 headers = {'User-Agent':'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:83.0) Gecko/20100101 Firefox/83.0'}
 
 
@@ -62,7 +65,7 @@ for j in range (1,reviewno):
     except:
         continue
 print('done expanding')
-for i in range(1,5):
+for i in range(1,reviewno+20):
     time.sleep(1)
     review_id = '/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p' 
     purpose='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[3]'
@@ -74,34 +77,32 @@ for i in range(1,5):
     try:
         review=driver.find_elements_by_xpath(review_id)
         purpos=driver.find_elements_by_xpath(purpose)
-        subdire=driver.find_elements_by_xpath(subdir)
-        supersu=driver.find_elements_by_xpath(supersub)
+        subdire=driver.find_element_by_xpath(subdir)
+          
+        
         ratings=driver.find_elements_by_xpath(rating_path)
         dates=driver.find_elements_by_xpath(date_path)
         users=driver.find_elements_by_xpath(user_path)
+        try:
+            supersu=driver.find_element_by_xpath(supersub)
+        except:
+            c=0
         print(f'----------------------------------------  Review number :: {i}  ----------------------------------------')
-        for (purp,sub,supers,rev,rat,dat,use) in zip(purpos,subdire,supersu,review,ratings,dates,users):
-            if purpos == None:
-                print('ayyyyy')
-                ### Customer review
-            else:
-                revew=rev.text.replace(purp.text,'')
-                print(purpos)
-            if supersu!=[]:
-                lmao=purp.text.replace(supers.text,'')
-            if subdire!=[]:
-                subtract=lmao.replace(sub.text,'')
-                '''
+        for (purp, rev, rat,dat,use) in zip(purpos,review,ratings,dates,users):
+            revew=rev.text.replace(purp.text,'')
+            lmao=purp.text.replace(subdire.text,'')
+            try:
+                subtract=lmao.replace(supersu.text,'')
+            except:
+                l='lmao'
             print(f'Date: {dat.text}')
             print(f'Rating: {rat.text}')
             print(f'Review: {revew}')
             print(f'Customer: {use.text}')
             print(f'Used for: {subtract}') ### what the car is used for i.e daily commute/ family car , etc.
-            '''
-
 
     except:
-        print("exception")
+        print("AD")
         continue
 print("alldoen")
 driver.quit()
