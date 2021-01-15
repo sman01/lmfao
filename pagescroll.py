@@ -11,6 +11,7 @@ import requests
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoAlertPresentException
 headers = {'User-Agent':'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:83.0) Gecko/20100101 Firefox/83.0'}
 
@@ -30,7 +31,7 @@ users=[]
 
 
 driver = webdriver.Firefox()
-driver.set_window_size(360,480)
+driver.set_window_size(640,720)
 url= "https://www.zigwheels.com/user-reviews/Maruti-Suzuki/Swift"
 driver.get(url)
 time.sleep(5)
@@ -65,7 +66,7 @@ for j in range (1,reviewno):
     except:
         continue
 print('done expanding')
-for i in range(1,reviewno+20):
+for i in range(1,20):
     time.sleep(1)
     review_id = '/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p' 
     purpose='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[3]'
@@ -77,16 +78,17 @@ for i in range(1,reviewno+20):
     try:
         review=driver.find_elements_by_xpath(review_id)
         purpos=driver.find_elements_by_xpath(purpose)
-        subdire=driver.find_element_by_xpath(subdir)
-          
-        
+        try:
+            subdire=driver.find_element_by_xpath(subdir)
+        except:
+            print('subdire not found')
         ratings=driver.find_elements_by_xpath(rating_path)
         dates=driver.find_elements_by_xpath(date_path)
         users=driver.find_elements_by_xpath(user_path)
         try:
             supersu=driver.find_element_by_xpath(supersub)
         except:
-            c=0
+            print('supersu not found')
         print(f'----------------------------------------  Review number :: {i}  ----------------------------------------')
         for (purp, rev, rat,dat,use) in zip(purpos,review,ratings,dates,users):
             revew=rev.text.replace(purp.text,'')
@@ -94,7 +96,7 @@ for i in range(1,reviewno+20):
             try:
                 subtract=lmao.replace(supersu.text,'')
             except:
-                l='lmao'
+                print('subtact not found')
             print(f'Date: {dat.text}')
             print(f'Rating: {rat.text}')
             print(f'Review: {revew}')
