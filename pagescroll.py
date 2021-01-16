@@ -58,7 +58,7 @@ while True:
 print("Thats all folks")
 print (f)
 for j in range (1,reviewno):
-    id='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(j)+']/div/div[2]/div/p/span[2]'
+    id='//div[@id="userReviews"]/div['+str(j)+']/div/div[2]/div/p/span[2]'
     try:
         btn= driver.find_element_by_xpath(id)
         btn.click()
@@ -76,16 +76,20 @@ for i in range(1,20):
     '''
     time.sleep(1)
     review_id = '//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p' 
-    purpose='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]'
-    subdir='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[3]/span'
-    supersub='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[3]/span[2]'
-    rating_path='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[1]/div[1]/span[2]/span' ####rating\
-    date_path='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[1]/div[1]/span[3]' ####date
-    user_path='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[1]/div[1]/span[1]/span'###customer    
+    try:
+        purpose='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]'
+    except:
+        purpose='//div[@id="userReviews"]/div['+str(i)+']/div[11]/div/div[2]/div/p/span[3]'
+    
+    subdir='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]/span'
+    supersub='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]/span[2]'
+    rating_path='//div[@id="userReviews"]/div['+str(i)+']/div/div[1]/div[1]/span[2]/span' ####rating\
+    date_path='//div[@id="userReviews"]/div['+str(i)+']/div/div[1]/div[1]/span[3]' ####date
+    user_path='//div[@id="userReviews"]/div['+str(i)+']/div/div[1]/div[1]/span[1]/span'###customer    
     try:
         review=driver.find_elements_by_xpath(review_id)
-        print(review)
         purpos=driver.find_elements_by_xpath(purpose)
+        print(purpos)
         try:
             subdire=driver.find_element_by_xpath(subdir)
         except:
