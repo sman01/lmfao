@@ -86,16 +86,15 @@ for i in range(1,20):
     date_path='//div[@id="userReviews"]/div['+str(i)+']/div/div[1]/div[1]/span[3]' ####date
     user_path='//div[@id="userReviews"]/div['+str(i)+']/div/div[1]/div[1]/span[1]/span'###customer 
     try:
-        review=driver.find_elements_by_xpath(review_id)
+        review=driver.find_element_by_xpath(review_id)
 
         try:
-            purpos=driver.find_elements_by_xpath(purpose)
+            purpos=driver.find_element_by_xpath(purpose)
         except:
             purpose='//div[@id="userReviews"]/div['+str(i)+']/div[11]/div/div[2]/div/p/span'
-            subdir='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span/span[1]'
             
             try:
-                purpos=driver.find_elements_by_xpath(purpose)
+                purpos=driver.find_element_by_xpath(purpose)
             except:
                 print("might be an ad")
         try:
