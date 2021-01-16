@@ -67,9 +67,16 @@ for j in range (1,reviewno):
         continue
 print('done expanding')
 for i in range(1,20):
+    
+    '''
+    //*[@id="userReviews"]
+    /html/body/div[15]/div/div[1]/section/div[3]/div[3]
+    /html/body/div[15]/div/div[1]/section/div[3]/div[3]/div[12]/div/div[2]/div/p
+    //*[@id="overflow_hidden_2183655"]/div/div[2]/div/p
+    '''
     time.sleep(1)
-    review_id = '/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p' 
-    purpose='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[3]'
+    review_id = '//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p' 
+    purpose='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]'
     subdir='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[3]/span'
     supersub='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[2]/div/p/span[3]/span[2]'
     rating_path='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[1]/div[1]/span[2]/span' ####rating\
@@ -77,31 +84,37 @@ for i in range(1,20):
     user_path='/html/body/div[15]/div/div[1]/section/div[3]/div[3]/div['+str(i)+']/div/div[1]/div[1]/span[1]/span'###customer    
     try:
         review=driver.find_elements_by_xpath(review_id)
+        print(review)
         purpos=driver.find_elements_by_xpath(purpose)
         try:
             subdire=driver.find_element_by_xpath(subdir)
         except:
-            print('subdire not found')
-        ratings=driver.find_elements_by_xpath(rating_path)
-        dates=driver.find_elements_by_xpath(date_path)
-        users=driver.find_elements_by_xpath(user_path)
+            e0='subdire not found'
+        try:
+            ratings=driver.find_elements_by_xpath(rating_path)
+            dates=driver.find_elements_by_xpath(date_path)
+            users=driver.find_elements_by_xpath(user_path)
+        except:
+            e4='ratings, dates, users not found'
         try:
             supersu=driver.find_element_by_xpath(supersub)
         except:
-            print('supersu not found')
+            e1='supersu not found'
         print(f'----------------------------------------  Review number :: {i}  ----------------------------------------')
         for (purp, rev, rat,dat,use) in zip(purpos,review,ratings,dates,users):
             revew=rev.text.replace(purp.text,'')
-            lmao=purp.text.replace(subdire.text,'')
             try:
+                lmao=purp.text.replace(subdire.text,'')
                 subtract=lmao.replace(supersu.text,'')
             except:
-                print('subtact not found')
+                e2='subtact and lmao not found'
+            '''
             print(f'Date: {dat.text}')
             print(f'Rating: {rat.text}')
             print(f'Review: {revew}')
             print(f'Customer: {use.text}')
             print(f'Used for: {subtract}') ### what the car is used for i.e daily commute/ family car , etc.
+            '''
 
     except:
         print("AD")

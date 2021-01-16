@@ -1385,3 +1385,114 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1610609893609	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.1, line 139: TypeError: $(...).offset() is undefined
 1610610075372	Marionette	INFO	Stopped listening on port 41475
+1610703288829	geckodriver	INFO	Listening on 127.0.0.1:60575
+1610703289834	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHTa8J9"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610703293452	Marionette	INFO	Listening on port 40415
+1610703293592	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
+1610703482862	Marionette	INFO	Stopped listening on port 40415
+1610703900693	geckodriver	INFO	Listening on 127.0.0.1:52095
+1610703900698	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileExxGGu"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610703903800	Marionette	INFO	Listening on port 37935
+1610703903855	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1610704094102	Marionette	INFO	Stopped listening on port 37935
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1610704095657	geckodriver	INFO	Listening on 127.0.0.1:50749
+1610704095661	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilej929JY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610704099372	Marionette	INFO	Listening on port 37463
+1610704099412	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
+1610704302324	Marionette	INFO	Stopped listening on port 37463
+1610782226878	geckodriver	INFO	Listening on 127.0.0.1:42489
+1610782227884	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile1RWxki"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610782231931	Marionette	INFO	Listening on port 33255
+1610782232027	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
+1610782415826	Marionette	INFO	Stopped listening on port 33255
+1610782737061	geckodriver	INFO	Listening on 127.0.0.1:48723
+1610782737066	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilebZXHIf"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610782740434	Marionette	INFO	Listening on port 39661
+1610782740511	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+Handler function _httpStopRequest threw an exception: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsITraceableChannel.setNewListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/network-monitor/network-observer.js :: _setupResponseListener :: line 1086"  data: no]
+Stack: _setupResponseListener@resource://devtools/server/actors/network-monitor/network-observer.js:1086:38
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:912:12
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:409:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1086, column: 0
+console.error: ({})
+Handler function _httpStopRequest threw an exception: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsITraceableChannel.setNewListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/network-monitor/network-observer.js :: _setupResponseListener :: line 1086"  data: no]
+Stack: _setupResponseListener@resource://devtools/server/actors/network-monitor/network-observer.js:1086:38
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:912:12
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:409:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1086, column: 0
+console.error: ({})
+Handler function _httpStopRequest threw an exception: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsITraceableChannel.setNewListener]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://devtools/server/actors/network-monitor/network-observer.js :: _setupResponseListener :: line 1086"  data: no]
+Stack: _setupResponseListener@resource://devtools/server/actors/network-monitor/network-observer.js:1086:38
+_createNetworkEvent@resource://devtools/server/actors/network-monitor/network-observer.js:912:12
+_httpStopRequest@resource://devtools/server/actors/network-monitor/network-observer.js:409:14
+exports.makeInfallible/<@resource://devtools/shared/ThreadSafeDevToolsUtils.js:103:22
+Line: 1086, column: 0
+console.error: ({})
+1610782946016	Marionette	INFO	Stopped listening on port 39661
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+1610783276139	geckodriver	INFO	Listening on 127.0.0.1:42143
+1610783276145	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileGgT8cg"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610783279218	Marionette	INFO	Listening on port 40771
+1610783279288	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
+1610783458316	Marionette	INFO	Stopped listening on port 40771
+1610783862292	geckodriver	INFO	Listening on 127.0.0.1:43549
+1610783862298	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2k48GC"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610783865135	Marionette	INFO	Listening on port 33183
+1610783865233	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
+1610784060291	Marionette	INFO	Stopped listening on port 33183
+1610784164626	geckodriver	INFO	Listening on 127.0.0.1:36491
+1610784164632	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNBpYqd"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610784168102	Marionette	INFO	Listening on port 44745
+1610784168184	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
+1610784287974	Marionette	INFO	Stopped listening on port 44745
