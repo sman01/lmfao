@@ -1511,3 +1511,10 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript error: , line 0: TypeError: ServiceWorker script at https://www.zigwheels.com/serviceworker.js for scope https://www.zigwheels.com/ threw an exception during script evaluation.
 JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
 1610784759721	Marionette	INFO	Stopped listening on port 46399
+1610784986110	geckodriver	INFO	Listening on 127.0.0.1:52925
+1610784986116	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevuHF7N"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610784989326	Marionette	INFO	Listening on port 36883
+1610784989378	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.zigcdn.com/js/js_bundler_new.html?type=javascript&files=zw_jquery.min,one_javascript,zw_jqueryui_autocomplete.min,zw_bootstrap.min,rvmp_zw_javascript,rvmp_central_cta&version=52.2, line 141: TypeError: $(...).offset() is undefined
+1610785220194	Marionette	INFO	Stopped listening on port 36883
