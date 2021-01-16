@@ -76,14 +76,10 @@ for i in range(1,20):
     '''
     time.sleep(1)
     review_id = '//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p' 
-    try:
-        purpose='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]'
-        subdir='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]/span'
-        supersub='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]/span[2]'
-    except:
-        purpose='//div[@id="userReviews"]/div['+str(i)+']/div[11]/div/div[2]/div/p/span'
-        subdir='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span/span[1]'
-        supersub='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span/span[2]'
+    purpose='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]'
+    subdir='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]/span'
+    supersub='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span[3]/span[2]'
+        
 
     
     rating_path='//div[@id="userReviews"]/div['+str(i)+']/div/div[1]/div[1]/span[2]/span' ####rating\
@@ -91,36 +87,53 @@ for i in range(1,20):
     user_path='//div[@id="userReviews"]/div['+str(i)+']/div/div[1]/div[1]/span[1]/span'###customer 
     try:
         review=driver.find_elements_by_xpath(review_id)
-        purpos=driver.find_elements_by_xpath(purpose)
-        print(purpos)
+
+        try:
+            purpos=driver.find_elements_by_xpath(purpose)
+        except:
+            purpose='//div[@id="userReviews"]/div['+str(i)+']/div[11]/div/div[2]/div/p/span'
+            subdir='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span/span[1]'
+            
+            try:
+                purpos=driver.find_elements_by_xpath(purpose)
+            except:
+                print("might be an ad")
         try:
             subdire=driver.find_element_by_xpath(subdir)
         except:
-            e0='subdire not found'
+            subdir='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span/span[1]'
+            try:
+                subdire=driver.find_element_by_xpath(subdir)
+            except:
+                e0='subdire not found'
         try:
-            ratings=driver.find_elements_by_xpath(rating_path)
-            dates=driver.find_elements_by_xpath(date_path)
-            users=driver.find_elements_by_xpath(user_path)
+            ratings=driver.find_element_by_xpath(rating_path)
+            dates=driver.find_element_by_xpath(date_path)
+            users=driver.find_element_by_xpath(user_path)
         except:
             e4='ratings, dates, users not found'
         try:
             supersu=driver.find_element_by_xpath(supersub)
         except:
-            e1='supersu not found'
-        print(f'----------------------------------------  Review number :: {i}  ----------------------------------------')
-        for (purp, rev, rat,dat,use) in zip(purpos,review,ratings,dates,users):
-            revew=rev.text.replace(purp.text,'')
+            supersub='//div[@id="userReviews"]/div['+str(i)+']/div/div[2]/div/p/span/span[2]'
             try:
-                lmao=purp.text.replace(subdire.text,'')
-                subtract=lmao.replace(supersu.text,'')
+                supersu=driver.find_element_by_xpath(supersub)
             except:
-                e2='subtact and lmao not found'
+                e1='supersu not found'
+        revew=review.text.replace(purpos,'')
+        try:
+            lmao=purpos.text.replace(subdire,'')
+            subtract=lmao.replace(supersu,'')
+        except:
+            e='subtract and lmao not found'
+        print(f'----------------------------------------  Review number :: {i}  ----------------------------------------')
+        
             
-            print(f'Date: {dat.text}')
-            print(f'Rating: {rat.text}')
-            print(f'Review: {revew}')
-            print(f'Customer: {use.text}')
-            print(f'Used for: {subtract}') ### what the car is used for i.e daily commute/ family car , etc.
+        print(f'Date: {dates.text}')
+        print(f'Rating: {ratings.text}')
+        print(f'Review: {revew}')
+        print(f'Customer: {users.text}')
+        print(f'Used for: {subtract}') ### what the car is used for i.e daily commute/ family car , etc.
             
 
     except:
