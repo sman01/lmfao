@@ -11,25 +11,7 @@ from selenium.webdriver.chrome.options import Options
 from datetime import datetime
 
 
-def err(url,no):
-    if no<5:
-        try:
-            time.sleep(100)
-            result = requests.get(url,headers=headers)
-            print(result.status_code)
-            print('why')
-            return result.status_code
-        except:
-            print("error")
-            time.sleep(150)
-            return 2
-            
-    else:
-        return 3
-
-
-headers = {'User-Agent':'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:83.0) Gecko/20100101 Firefox/83.0'}
-
+url=[]
 companies=['Maruti_Suzuki', 'MG_Motor', 'Hyundai', 'Honda', 'Toyota', 'Mahindra', 'Tata', 'Kia', 'Volkswagen', 'Ford', 'Renault', 'BMW', 'Audi', 'Mercedes_Benz', 'Skoda', 'Datsun', 'Mitsubishi', 'Volvo', 'Nissan', 'Jaguar', 'Lamborghini', 'Rolls_Royce', 'MINI', 'Bugatti', 'Porsche', 'Ferrari', 'Land_Rover', 'Maserati', 'Bentley', 'ISUZU', 'Force_Motors', 'DC', 'Jeep', 'Aston_Martin', 'Lexus']
 
 Maruti_Suzuki = ['Swift', 'Baleno', 'Vitara-Brezza', 'Dzire', 'Ertiga', 'Wagon-R', 'Alto-800', 'Celerio', 'S-Presso', 'S-Cross', 'XL6', 'Ignis', 'Ciaz', 'Eeco', 'Celerio-X', 'Swift-Dzire-Tour', 'Baleno-RS', 'Baleno-2014-2018', 'S-Cross-2017-2020', 'Vitara-Brezza-2016-2020', 'Dzire-2017-2020', 'Alto-K10', 'Wagon-R-[2001-2018]', 'Zen', 'Esteem', '800', 'Estilo', 'Ritz', 'A-Star', 'SX4', 'Omni', 'Gypsy']
@@ -67,3 +49,9 @@ DC = ['Avanti']
 Jeep = ['Compass', 'Wrangler', 'Compass-Trailhawk', 'Wrangler-2016-2019', 'Grand-Cherokee']
 Aston_Martin = ['Vantage', 'DB11', 'Virage', 'One-77', 'Vantage-2011-2019', 'Vanquish', 'DB11-2016-2020', 'Rapide', 'DB9']
 Lexus = ['LS', 'ES', 'NX', 'LX', 'RX', 'LC-500h']
+for i in companies:
+    for j in eval(i):
+        ur="https://www.zigwheels.com/user-reviews/"+str(i.replace('_','-'))+"/"+str(j)
+        url.append(ur)
+print(url)
+print(len(url))
